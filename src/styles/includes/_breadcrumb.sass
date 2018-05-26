@@ -1,0 +1,61 @@
+.breadcrumb-wrap
+	+pos(rel,null)
+	.breadcrumb-img
+		img
+			width: 100%
+			+media-breakpoint-down(lg)
+				height: 200px
+				object-fit: cover
+	.breadcrumb-content
+		+pos(abs, 0 null 0 0)
+		right: 0
+		+flexbox
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		align-content: center
+	.pagename
+		+fs(24rem)
+		font-weight: 600
+		color: $purple
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 15px
+		width: 100%
+		&:after
+			content: ''
+			display: block
+			width: 50px
+			height: 1px
+			background: $purple
+			margin: 5px auto 0
+	ol.breadcrumb
+		width: 100%
+		background: none
+		margin: 0
+		padding: 0
+		+bor-rad(0)
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		justify-content: center
+		li
+			&:before
+				content: '\f105'
+				display: inline-block
+				line-height: 1
+				margin: 0px 10px
+			&:first-child
+				&:before
+					display: none
+				a
+					+fs(0)
+					&:before
+						content: '\f015'
+						+fs(14rem)
+			a
+				+fs(14rem)
+				font-weight: 300
+				line-height: 20px
+				color: $purple
