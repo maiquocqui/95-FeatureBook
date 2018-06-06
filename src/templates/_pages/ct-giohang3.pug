@@ -90,18 +90,7 @@
 							.check-group
 								input#cntt(type="checkbox", name="" checked)
 								label(for="cntt") Cập nhật thông tin trên làm địa chỉ hiện tại của tôi
-						.group.clearfix
-							.form-group.receive-place
-								.label
-									label(for="") Địa điểm nhận hàng
-								.input
-									ul
-										li.radio
-											input#rc1(type="radio", name="receiver" checked)
-											label(for="rc1") Nhận hàng tại cửa hàng
-										li.radio
-											input#rc2(type="radio", name="receiver")
-											label(for="rc2") Nhận hàng tại nhà
+						.freeship.w-100.alert.alert-info <i class="fa fa-truck" aria-hidden="true"></i> Miễn phí vận chuyển (Nội Thành) cho đơn hàng từ 299.000đ
 							
 				//- section.shipping-kind.clearfix
 				//- 	.title Cách thức nhận hàng
@@ -173,7 +162,17 @@
 					.cart-form.payment-list.clearfix
 						.payment-method
 							.select-group
-								input#ttnh(type="radio", name="rd1" checked)
+								input#ttnh0(type="radio", name="rd1" checked)
+								label(for="ttnh0")
+									.method-info
+										.method-img
+											img(src="img/cart/cash.png", alt="")
+										.method-detail
+											.method-name Thanh toán chuyển khoản
+											.method-des Quý khách sẽ thanh toán bằng chuyển khoản trực tiếp
+						.payment-method
+							.select-group
+								input#ttnh(type="radio", name="rd1")
 								label(for="ttnh")
 									.method-info
 										.method-img

@@ -175,6 +175,14 @@ $(document).ready(function () {
         focusOnSelect: true
     });
 
+    // Cart lastview
+    $('.cart-lastview-slide').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false
+    });
+
     // SERVICE TOGGLE
     $('.feature .feature-name').click(function () {
         if ($(this).parent().hasClass('active') == true) {

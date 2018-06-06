@@ -405,19 +405,11 @@
 		&:before
 			content: '\f017'
 	.cart-lastview-slide
-		border: 1px solid darken($white,10%)
-		border-left: none
 		// +bor-rad(5px)
 		// padding: 10px
-		&:before
-			content: ''
-			+pos(abs, 0 null 0 0)
-			width: 1px
-			background: darken($white,10%)
-			z-index: 5
 		.slick-prev, .slick-next
 			+pos(abs, 50% null null null)
-			+transform(translateY(-50%))
+			+transform(translateY(-75%))
 			+fs(0)
 			width: 36px
 			height: 36px
@@ -440,9 +432,26 @@
 			right: 0
 			&:before
 				content: '\f105'
+		.slick-list
+			margin: 0px -10px
 		.item
-			border-left: 1px solid darken($white,10%)
-			overflow: hidden
+			padding: 0px 10px
+	.product
+		display: block
+		.product-img
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			height: 150px
+			border: 1px solid darken($white,10%)
+			img
+				max-width: 80%
+				max-height: 80%
+		.product-name
+			padding: 10px 0
+			+fs(15rem)
+			color: $main
 .cart-page
 	.btn-wrap
 		// margin-bottom: 30px
