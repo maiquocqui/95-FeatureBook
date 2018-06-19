@@ -1303,6 +1303,7 @@
 								justify-content: center
 								align-items: center
 								width: 85px
+								height: 85px
 								min-height: 85px
 								padding: 10px 0
 								+transition(all,0.3s)
@@ -1325,11 +1326,12 @@
 									// border: none
 								.method-name
 									+fs(14rem)
-									font-weight: 500
+									font-weight: 700
+									text-transform: uppercase
 									+media-breakpoint-down(xs)
 										+fs(13rem)
 								.method-des
-									+fs(13rem)
+									+fs(14rem)
 									color: darken($white,40%)
 									+media-breakpoint-down(xs)
 										+fs(12rem)
@@ -1712,3 +1714,7 @@
 			&:hover
 				background: darken($white,30%)
 	
+.freeship
+	color: $purple
+	background: #e9e6f0
+	border-color: lighten($purple,40%)

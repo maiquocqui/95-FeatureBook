@@ -9530,6 +9530,7 @@ header, footer {
             justify-content: center;
             align-items: center;
             width: 85px;
+            height: 85px;
             min-height: 85px;
             padding: 10px 0;
             -webkit-transition: all, 0.3s;
@@ -9555,12 +9556,13 @@ header, footer {
                 width: 100%; } }
             .payment-info .cart-form .payment-method .select-group input + label .method-info .method-detail .method-name {
               font-size: 0.875rem;
-              font-weight: 500; }
+              font-weight: 700;
+              text-transform: uppercase; }
               @media (max-width: 575.98px) {
                 .payment-info .cart-form .payment-method .select-group input + label .method-info .method-detail .method-name {
                   font-size: 0.8125rem; } }
             .payment-info .cart-form .payment-method .select-group input + label .method-info .method-detail .method-des {
-              font-size: 0.8125rem;
+              font-size: 0.875rem;
               color: #999999; }
               @media (max-width: 575.98px) {
                 .payment-info .cart-form .payment-method .select-group input + label .method-info .method-detail .method-des {
@@ -9969,6 +9971,11 @@ header, footer {
       color: #333333; }
       .cartpanel .button .btn-viewcart:hover {
         background: #b3b3b3; }
+
+.freeship {
+  color: #6c4099;
+  background: #e9e6f0;
+  border-color: #d2c0e5; }
 
 .career-page {
   margin-bottom: 30px;

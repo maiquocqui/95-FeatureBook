@@ -90,7 +90,10 @@
 							.check-group
 								input#cntt(type="checkbox", name="" checked)
 								label(for="cntt") Cập nhật thông tin trên làm địa chỉ hiện tại của tôi
-						.freeship.w-100.alert.alert-info <i class="fa fa-truck" aria-hidden="true"></i> Miễn phí vận chuyển (Nội Thành) cho đơn hàng từ 299.000đ
+						.freeship.w-100.alert.alert-info 
+							img(src="img/cart/ship.png", alt="")
+							| Miễn phí vận chuyển (Nội Thành) cho đơn hàng từ 
+							strong 299.000đ
 							
 				//- section.shipping-kind.clearfix
 				//- 	.title Cách thức nhận hàng
@@ -169,7 +172,15 @@
 											img(src="img/cart/cash.png", alt="")
 										.method-detail
 											.method-name Thanh toán chuyển khoản
-											.method-des Quý khách sẽ thanh toán bằng chuyển khoản trực tiếp
+											.method-des 
+												p Quý khách sẽ thanh toán bằng chuyển khoản trực tiếp 
+												img(src="img/cart/frship.png", alt="").mb-2.mt-1
+												p Ngân hàng ABC (Chi nhánh Tân Định)
+												ul
+													li Số tài khoản:
+														strong 0710335678
+													li Chủ tài khoản: 
+														strong Nguyễn Văn A
 						.payment-method
 							.select-group
 								input#ttnh(type="radio", name="rd1")
@@ -180,7 +191,7 @@
 										.method-detail
 											.method-name Thanh toán khi nhận hàng
 											.method-des Quý khách sẽ thanh toán bằng tiền mặt hoặc thẻ khi Do Go Toi Yeu giao hàng cho quý khách
-						.payment-method
+						//- .payment-method
 							.select-group
 								input#ttatm(type="radio", name="rd1")
 								label(for="ttatm")
@@ -192,7 +203,7 @@
 											.method-des Thẻ ATM của bạn cần đăng ký sử dụng dịch vụ Internet Banking.
 												br
 												|Bạn sẽ được chuyển tới Napas để thanh toán
-						.payment-method
+						//- .payment-method
 							.select-group
 								input#ttqt(type="radio", name="rd1")
 								label(for="ttqt")
@@ -204,7 +215,7 @@
 											.method-des Hỗ trợ Credit và Debit.
 												br
 												|Bạn sẽ được chuyển tới OnePay để thanh toán.
-						.payment-method.hidden
+						//- .payment-method.hidden
 							.select-group
 								input#tttg(type="radio", name="rd1")
 								label(for="tttg")
