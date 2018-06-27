@@ -7,12 +7,12 @@ $(document).ready(function() {
     if ($(window).width() < 1200) {}
 
     $('.btn-showmenu').click(function() {
-        $('.menu').addClass('open');
+        $('.header-menu').addClass('open');
         $('.overlay').fadeIn(500);
     })
     $('.overlay').click(function() {
         $(this).fadeOut(500);
-        $('.menu').removeClass('open');
+        $('.header-menu').removeClass('open');
     })
 
     $(window).bind('scroll', function() {
@@ -22,6 +22,10 @@ $(document).ready(function() {
             $('header').removeClass('minimal');
         }
     });
+
+    $('.search-toggle').click(function() {
+        $('.search-wrap').fadeToggle(500);
+    })
 
     // BANNER
     $('.banner').slick({
@@ -167,22 +171,78 @@ $(document).ready(function() {
         ]
     });
 
-    // Product slide
+    // product slide
     $('.product-slide').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
         fade: true,
-        asNavFor: '.product-nav'
+        // autoplay: true,
+        // autoplaySpeed: 5000,
+        asNavFor: '.product-nav',
     });
+
     $('.product-nav').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         asNavFor: '.product-slide',
         dots: false,
-        arrows: false,
-        focusOnSelect: true
+        arrows: true,
+        focusOnSelect: true,
+        vertical: true,
+        responsive: [{
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            }
+        ]
+    });
+
+    // product slick
+    $('.product-slick').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [{
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
     });
 
     // Cart lastview
@@ -191,6 +251,25 @@ $(document).ready(function() {
         slidesToScroll: 1,
         arrows: true,
         dots: false,
+        responsive: [{
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
     })
 
     // SERVICE TOGGLE
@@ -226,5 +305,11 @@ $(document).ready(function() {
 
     // page name breadcrumb
     $(".pagename").append($('.breadcrumb li a').eq(1).find('span').html());
+
+    // Responsive tabs
+    $('#responsivetabs').responsiveTabs({
+        startCollapsed: 'accordion',
+        animation: 'slide'
+    });
 
 });

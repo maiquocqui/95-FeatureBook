@@ -1,7 +1,203 @@
-// body
-// 	padding-top: 120px
-header, footer
-	+flexbox
-	justify-content: center
-	img
-		max-width: unset
+header
+	background: $purplebg
+	border-bottom: 2px solid lighten($purple,45%)
+	.header-top
+		border-bottom: 1px solid color-rgba($black,0.05)
+	.header-wrap
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+	.btn-showmenu
+		+fs(18rem)
+		color: $purple
+		display: none
+		+media-breakpoint-down(lg)
+			display: block
+			margin-right: 15px
+	.overlay
+		+pos(fix, 0 null 0 0)
+		right: 0
+		z-index: 800
+		background: $black
+		opacity: 0.8
+		display: none
+	.sitelogo
+		height: 80px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		+media-breakpoint-down(lg)
+			height: 50px
+		img
+			+media-breakpoint-down(lg)
+				height: 30px
+	.col-right
+		flex: auto
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: flex-end
+	.hotline
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(30rem)
+			color: $purple
+			+media-breakpoint-down(lg)
+				+fs(0)
+		img
+			+media-breakpoint-down(lg)
+				height: 24px
+	.login
+		margin-left: 15px
+		+media-breakpoint-down(lg)
+			margin-left: 10px
+		a
+			display: block
+		img
+			+media-breakpoint-down(lg)
+				height: 24px
+	.wishlist
+		margin-left: 15px
+		+media-breakpoint-down(lg)
+			margin-left: 10px
+		a
+			display: block
+		img
+			+media-breakpoint-down(lg)
+				height: 22px
+	.cart
+		margin-left: 15px
+		+media-breakpoint-down(lg)
+			margin-left: 10px
+		.cart-toggle
+			display: block
+			+pos(rel,null)
+			+media-breakpoint-down(lg)
+				img
+					height: 30px
+			.cart-amount
+				+pos(abs, 0 null 0 0)
+				right: 0
+				z-index: 1
+				+flexbox
+				align-items: center
+				align-items: center
+				justify-content: center
+				+fs(12rem)
+				font-weight: 700
+				color: $pink
+				padding-top: 5px
+	.header-menu
+		+media-breakpoint-down(lg)
+			+pos(fix, 0 null 0 0)
+			width: 280px
+			z-index: 1000
+			background: $purplebg
+			+transform(translateX(-100%))
+			+transition(all,0.5s)
+			.container
+				padding: 0
+			.header-wrap
+				display: block
+			&.open
+				+transform(translateX(0))
+		.menu
+			.menu-logo
+				display: none
+				+media-breakpoint-down(lg)
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					padding: 20px 0
+					border-bottom: 1px solid $purple
+				img
+					+media-breakpoint-down(lg)
+						height: 40px
+			ul.menu-link
+				+flexbox
+				flex-wrap: wrap
+				align-items: center
+				align-content: center
+				padding: 5px 0
+				+media-breakpoint-down(lg)
+					display: block
+					padding: 0
+				li
+					+ li
+						margin-left: 20px
+						+media-breakpoint-down(lg)
+							margin-left: 0
+					a
+						display: block
+						+fs(14rem)
+						line-height: 20px
+						padding: 5px 30px
+						color: $purple
+						+media-breakpoint-down(lg)
+							padding: 10px 30px
+							+fs(16rem)
+					&.active
+						a
+							background: $purple
+							color: $white
+	.search
+		border-left: 1px solid color-rgba($black,0.05)
+		+pos(rel,null)
+		+media-breakpoint-down(lg)
+			padding-left: 30px
+			width: calc(100% - 70px)
+		.search-toggle
+			width: 40px
+			height: 40px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			color: darken($white,40%)
+			+fs(18rem)
+			cursor: pointer
+			+media-breakpoint-down(lg)
+				display: none
+			&:hover
+				color: $purple
+		.search-wrap
+			+pos(abs, 100% 0 null null)
+			display: none
+			+media-breakpoint-down(lg)
+				display: block
+				+pos(static,null)
+		.searchbox
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: space-between
+			background: $purple
+			color: $white
+			padding: 5px 10px
+			input
+				background: none
+				border: none
+				color: $white
+				+fs(14rem)
+				flex: auto
+				width: calc(100% - 30px)
+			.searchbutton
+				color: $white
+	.language
+		border-left: 1px solid color-rgba($black,0.05)
+		border-right: 1px solid color-rgba($black,0.05)
+		+media-breakpoint-down(lg)
+			border-right: none
+			margin-right: 30px
+		a
+			width: 40px
+			height: 40px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center

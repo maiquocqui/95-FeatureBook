@@ -1,0 +1,84 @@
+.product-filter
+	.product-cate
+		.cate-icon
+			img(src="img/icon/c1.png", alt="")
+		h1.cate-name Tập đóng kim
+	//- .filter-wrap.category-group
+		.filter-group
+			.filter-title 
+				span Danh mục sản phẩm
+			.filter-option
+				nav.filter-category
+					ul
+						li.hassub.active
+							a(href="#") Dầu dừa
+							.btn-showsubfilter <i class="fa fa-angle-down"></i>
+							.sub
+								ul
+									li
+										a(href="#!") Dầu dừa nguyên chất
+									li.active
+										a(href="#!") Dầu dừa tinh khiết
+									li
+										a(href="#!") Dầu dừa tinh luyện
+						li
+							a(href="#") Nước dừa
+						li
+							a(href="#") Nước cốt dừa
+		.btn-closefilter.btn-close <span class="lnr lnr-cross"></span> Đóng bộ lọc
+	.filter-wrap.option-group
+		//- .filter-group
+			.filter-title 
+				span Mức giá
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option
+				.price-select
+					select
+						option -- Lọc khoảng giá --
+						option Dưới 2 triệu
+						option 2 - 5 triệu
+						option 5 - 10 triệu
+						option 10 - 20 triệu
+						option 20 - 50 triệu
+						option Trên 50 triệu
+		.filter-group
+			.filter-title 
+				span Khổ giấy
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.option-tag
+				nav.filter-ajax
+					ul
+						li
+							a(href="#") A5
+						li
+							a.active(href="#") A6
+						li
+							a(href="#") A7
+						li
+							a(href="#") A2
+		.filter-group
+			.filter-title 
+				span Dòng kẻ
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.option-tag
+				nav.filter-ajax
+					ul
+						li
+							a.active(href="#") Dòng kẻ ngang
+						li
+							a(href="#") Dòng kẻ ô ly
+						li
+							a(href="#") Dòng kẻ 5 ô
+		.filter-group
+			.filter-title 
+				span Số trang
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.option-tag
+				nav.filter-ajax
+					ul
+						li
+							a.active(href="#") 96 trang
+						li
+							a(href="#") 120 trang
+						li
+							a(href="#") 200 trang

@@ -66,37 +66,55 @@
 			color: $green
 			border-color: $green
 			background: lighten($green,45%)
+.product-filter
+	padding-top: 60px
+	+media-breakpoint-down(md)
+		margin-bottom: -40px
+	.product-cate
+		+flexbox
+		align-items: center
+		align-content: center
+		margin-bottom: 40px
+		.cate-icon
+			img
+		.cate-name
+			flex: auto
+			margin-left: 10px
+			+fs(16rem)
+			text-transform: uppercase
+			line-height: 20px
+			padding: 15px 0px 15px
+			color: $white
+			font-weight: 600
+			background: $purple
+			box-shadow: 5px 5px color-rgba($purple,0.2)
+			text-align: center
 .filter-col
 .filter-wrap
 	margin-bottom: 20px
-	+media-breakpoint-down(md)
-		margin: 0
+	// +media-breakpoint-down(md)
+	// 	margin: 0
 		
-		+pos(fix, 60px null 41px 0)
-		z-index: 70
-		right: 0
-		background: $white
-		overflow: auto
-		padding: 30px 200px
-		+transform(translateY(-130%))
-		+transition(all,0.5s)
-		// opacity: 0
-		visibility: hidden
-		&.open
-			+transform(translateY(0%))
-			// opacity: 1
-			visibility: visible
-	+media-breakpoint-down(sm)
-		padding: 30px 100px
-	+media-breakpoint-down(xs)
-		padding: 15px
+	// 	+pos(fix, 60px null 41px 0)
+	// 	z-index: 70
+	// 	right: 0
+	// 	background: $white
+	// 	overflow: auto
+	// 	padding: 30px 200px
+	// 	+transform(translateY(-130%))
+	// 	+transition(all,0.5s)
+	// 	// opacity: 0
+	// 	visibility: hidden
+	// 	&.open
+	// 		+transform(translateY(0%))
+	// 		// opacity: 1
+	// 		visibility: visible
+	// +media-breakpoint-down(sm)
+	// 	padding: 30px 100px
+	// +media-breakpoint-down(xs)
+	// 	padding: 15px
 	.filter-group
-		margin-bottom: 30px
-		&:before, &:after
-			content: ''
-			display: table
-			width: 100%
-			clear: both
+		margin-bottom: 20px
 		.btn-reset
 			+pos(abs, 0px 0px null null)
 			width: 24px
@@ -113,41 +131,38 @@
 			&:hover
 				color: $green
 	.filter-title
-		color: $main
-		+pos(rel,null)
-		margin-bottom: 15px
-		// &:after
-		// 	content: ''
-		// 	height: 2px
-		// 	+pos(abs, 50% 0 null 0)
-		// 	background: darken($white,10%)
+		border-top: 1px solid color-rgba($black,0.05)
 		span 
-			display: inline-block
-			text-transform: uppercase
-			+fs(13rem)
-			font-weight: 700
+			display: block
+			+fs(16rem)
+			line-height: 20px
+			padding: 15px 0
+			font-weight: 600
 			+pos(rel,null)
 			z-index: 1
-			background: $white
+			color: $purple
 			padding-right: 10px
-	&.category-group
-		.filter-group
-			background: $white
-		.filter-title
-			background: $maingradient
-			+bor-rad(5px 5px 0 0)
-			margin-bottom: 0
-			margin-bottom: 1px
+			&:before
+				content: ''
+				display: block
+				width: 10px
+				height: 2px
+				background: $purple
+				+pos(abs, 50% 0 null null)
+				+transform(translate(0,-50%))
+			&:after
+				content: ''
+				display: block
+				width: 2px
+				height: 10px
+				background: $purple
+				+pos(abs, 50% 5px null null)
+				+transform(translate(50%,-50%))
+				opacity: 0
+		&.active
 			span
-				color: $white
-				font-weight: 600
-				background: none
-				padding: 8px 15px
-		.filter-option
-			+bor-rad(0 0 5px 5px)
-			padding: 0
-			border: 1px solid darken($white,10%)
-		
+				&:after
+					opacity: 1
 	.filter-option
 		+bor-rad(5px)
 		padding: 20px
@@ -224,27 +239,37 @@
 		&::-webkit-scrollbar-thumb
 			background-color: darken($white,40%)
 		> ul 
-			+flexbox
-			flex-wrap: wrap
-			> li 
-				margin-right: 10px
-				margin-bottom: 10px
-				> a 
+			> li
+				margin-bottom: 5px
+				a
 					display: block
-					+fs(12rem)
-					color: darken($white,60%)
-					padding: 2px 15px
-					+bor-rad(5px)
-					border: 2px solid darken($white,10%)
-					font-weight: 500
-					box-sizing: border-box
-					&:hover
-						border-color: $green
+					padding-left: 20px
+					+pos(rel,null)
+					+fs(14rem)
+					color: $purple
+					&:before
+						content: ''
+						display: block
+						width: 14px
+						height: 14px
+						border: 1px solid color-rgba($black,0.2)
+						background: $white
+						+pos(abs, 2px null null 0)
+					&:after
+						content: '\f00c'
+						color: $purple
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						width: 12px
+						height: 12px
+						background: $white
+						+pos(abs, 3px null null 1px)
+						opacity: 0
 					&.active
-						background: $maingradient
-						color: $white
-						border: none
-						padding: 4px 17px
+						&:after
+							opacity: 1
 		&.brand-category
 			> ul
 				> li
@@ -306,7 +331,7 @@
 			content: ''
 			+pos(abs, null 0 0 0)
 			height: 3px
-			background: $maingradient
+			background: $purple
 		select
 			padding: 10px 0
 			width: 100%

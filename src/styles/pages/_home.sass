@@ -1,12 +1,59 @@
 .page-title
-	+fs(24rem)
+	+fs(22rem)
+	color: $purple
 	line-height: 1
 	font-weight: 600
-	margin-bottom: 20px
-	border-left: 5px solid $purple
-	padding-left: 10px
+	margin-bottom: 30px
+	// border-left: 5px solid $purple
+	// padding-left: 10px
 .small-title
 	+fs(18rem)
 	font-weight: 600
 	color: $purple
 	margin-bottom: 10px
+
+.home-cate
+	+pos(rel,null)
+	a
+		display: block
+	img
+		width: 100%
+		+media-breakpoint-down(sm)
+			height: 210px
+			object-fit: cover
+	.cate-name
+		background: $purple
+		color: $white
+		+fs(25rem)
+		text-transform: uppercase
+		line-height: 30px
+		padding: 14px 30px 10px
+		box-shadow: 5px 5px color-rgba($purple,0.2)
+		+pos(abs, 60px null null 50%)
+		+transform(translateX(-50%))
+		+media-breakpoint-down(md)
+			+fs(18rem)
+			white-space: nowrap
+			line-height: 20px
+			top: 40px
+	&.cate2
+		.cate-name
+			top: unset
+			bottom: 130px
+			+media-breakpoint-down(md)
+				bottom: 40px
+			+media-breakpoint-down(sm)
+				top: 40px
+				bottom: unset
+	&.cate3
+		.cate-name
+			bottom: unset
+			top: 50%
+			left: 70%
+			+transform(translate(-50%,-50%))
+	&.cate4
+		.cate-name
+			bottom: unset
+			top: 50%
+			left: 30%
+			+transform(translate(-50%,-50%))

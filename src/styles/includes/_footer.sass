@@ -1,0 +1,100 @@
+footer
+	background: $purplebg
+	border-top: 2px solid lighten($purple,45%)
+	.footer-top
+		padding: 40px 0
+	.sitelogo
+		text-align: center
+		margin-bottom: 15px
+		img
+			height: 40px
+	.company
+		text-align: center
+		margin-bottom: 30px
+		color: $purple
+		+fs(14rem)
+		font-weight: 700
+		text-transform: uppercase
+	.footer-col
+		margin-bottom: 20px
+		+media-breakpoint-down(md)
+			text-align: center
+	.footer-title
+		+fs(15rem)
+		text-transform: uppercase
+		font-weight: 700
+		margin-bottom: 20px
+		+media-breakpoint-down(sm)
+			+fs(13rem)
+	.footer-contact
+		+media-breakpoint-down(md)
+			text-align: center
+		ul
+			li
+				padding-left: 25px
+				+pos(rel,null)
+				+fs(14rem)
+				color: darken($white,60%)
+				margin-bottom: 10px
+				.fa
+					color: $purple
+					+pos(abs, 2px null null 0)
+					+media-breakpoint-down(md)
+						+pos(static,null)
+						margin-right: 5px
+	.subscribe
+		margin-bottom: 20px
+	.module-title
+		@extend .footer-title
+	.subscribefrm
+		+flexbox
+		+media-breakpoint-down(md)
+			max-width: 350px
+			margin: 0 auto
+		input
+			flex: auto
+			border: none
+			background: $white
+			margin: 0px
+			padding: 0px 20px
+			+fs(14rem)
+			line-height: 40px
+			font-style: italic
+		.subscribebutton
+			background: $purple
+			height: 40px
+			line-height: 44px
+			padding: 0px 30px
+			color: $white
+			+fs(15rem)
+			text-transform: uppercase
+	.social
+		+flexbox
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(md)
+			justify-content: center
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			width: 37px
+			height: 37px
+			+fs(18rem)
+			+bor-rad(10px)
+			overflow: hidden
+			border: 1px solid darken($white,20%)
+			+ a
+				margin-left: 10px
+			.fa, img
+				filter: grayscale(100%)
+				opacity: 0.5
+	.footer-bottom
+		background: $purple
+		.copyright
+			+fs(15rem)
+			font-weight: normal
+			text-align: center
+			color: $white
+			padding: 8px 0

@@ -1,0 +1,91 @@
+.productpage
+	main
+		background: $purplebg
+
+.product-page
+	padding: 60px 0
+	.row
+		margin: 0px -7px
+		.col-6
+			padding: 0px 7px
+	.btn-loadmore
+		display: inline-block
+		+fs(14rem)
+		font-weight: 600
+		text-transform: uppercase
+		color: $purple
+		border: 2px solid $purple
+		padding: 6px 30px 3px
+		&:hover
+			background: $purple
+			color: $white
+.product-col
+	+transition(all,0.5s)
+	+pos(rel,null)
+	height: calc(100% - 20px)
+	+bor-rad(0 0 10px 10px)
+	overflow: hidden
+	margin-bottom: 20px
+	&:hover
+		background: $white
+		box-shadow: 0px 5px 10px color-rgba($black,0.1)
+		figure
+			.btn-buy
+				visibility: visible
+				opacity: 1
+	figure
+		.product-btn
+			+pos(rel,null)
+		.product-img
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			height: 220px
+			background: $white
+			img
+				max-width: 90%
+				max-height: 90%
+		.btn-buy
+			+pos(abs, 50% null null 50%)
+			+transform(translate(-50%,-50%))
+			z-index: 3
+			display: block
+			background: $purple
+			color: $white
+			+fs(14rem)
+			text-transform: uppercase
+			padding: 6px 15px 3px
+			white-space: nowrap
+			box-shadow: 3px 3px color-rgba($purple,0.2)
+			visibility: hidden
+			opacity: 0
+			+transition(all,0.5s)
+			&:hover
+				background: lighten($purple,10%)
+		.btn-like
+			+pos(abs, 10px 10px null null)
+			z-index: 1
+			img
+				height: 20px
+		.promotion
+			+pos(abs, 10px null null 10px)
+			z-index: 2
+		figcaption
+			padding: 15px
+			+pos(rel,null)
+			.product-name
+				+fs(14rem)
+				text-transform: uppercase
+				font-weight: 600
+				line-height: 1.2
+				color: $purple
+			.product-id
+				+fs(12rem)
+				line-height: 1.2
+				color: $purple
+				text-transform: uppercase
+			.product-price
+				.new
+					+fs(12rem)
+					color: $main

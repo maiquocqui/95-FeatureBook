@@ -1,0 +1,11 @@
+extends _layout/layout
+
+block variables
+	- var title = "Futurebook"
+	- var bodyclass = "productpage"
+
+block body 
+	include _layout/header
+	main
+		include _pages/ct-sanpham
+	include _layout/footer

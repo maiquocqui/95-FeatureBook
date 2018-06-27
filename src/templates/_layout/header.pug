@@ -1,2 +1,58 @@
 header
-	img(src="img/header.png", alt="")
+	.header-top
+		.container
+			.header-wrap
+				.btn-showmenu <i class="fa fa-bars" aria-hidden="true"></i>
+				.overlay
+				.sitelogo
+					a(href="#!")
+						img(src="img/logo.png", alt="")
+				.col-right
+					.hotline
+						a(href="tel:1900626946")
+							img(src="img/phone.png", alt="")
+							| 1900626946
+					.login
+						a(href="#!")
+							img(src="img/user.png", alt="")
+					.wishlist
+						a(href="#!")
+							img(src="img/wishlist.png", alt="")
+					.cart
+						.cart-toggle
+							img(src="img/cart.png", alt="")
+							.cart-amount 2
+	.header-menu
+		.container
+			.header-wrap
+				nav.menu
+					.menu-logo
+						.sitelogo
+							a(href="#!")
+								img(src="img/logo.png", alt="")
+					.menu-wrap
+						ul.menu-link
+							li.active
+								a(href="#!") Trang chủ
+							li
+								a(href="#!") Tập dán gáy
+							li
+								a(href="#!") Tập đóng kim
+							li
+								a(href="#!") Sổ lò xo
+							li
+								a(href="#!") Sổ tay
+							li
+								a(href="#!") Phụ kiện
+							li
+								a(href="#!") Khuyến mãi
+				.col-right
+					.search
+						.search-toggle <i class="fa fa-search" aria-hidden="true"></i>
+						.search-wrap
+							.searchbox
+								input(type="text" placeholder="Tìm kiếm...")
+								button.searchbutton <i class="fa fa-search" aria-hidden="true"></i>
+					.language
+						a(href="#!")
+							img(src="img/en.png", alt="")
